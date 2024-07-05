@@ -1,0 +1,18 @@
+Person A: Hello, Doctor. I've been having a sore throat for the past two weeks.
+Person B: I see. Have you had any other symptoms like fever or cough?
+Person A: Yes, I've had a mild fever and a bit of a cough.
+Person B: Alright, let's have a look at your throat. Please open your mouth wide and say "ah."
+Person A: Ah.
+Person B: Your throat looks quite inflamed. I think we should do a throat swab to check for any infections.
+Person A: Okay, that sounds like a good idea. What should I do in the meantime?
+Person B: Try to rest, drink plenty of fluids, and avoid any irritants like smoke. I'll prescribe you some medication to help with the pain and inflammation.
+
+*****
+Person A: こんにちは、先生。ここ2週間ほど喉が痛いんです。
+Person B: そうですか。他に熱や咳などの症状はありますか？
+Person A: はい、微熱と少し咳が出ています。
+Person B: なるほど。では、喉を見せてください。口を大きく開けて「アー」と言ってください。
+Person A: アー。
+Person B: 喉がかなり炎症を起こしていますね。感染の有無を確認するために喉のスワブ検査をしましょう。
+Person A: はい、それが良さそうです。検査の間、何をすればいいですか？
+Person B: 休養をとって、水分をたくさん摂り、煙などの刺激物を避けてください。痛みと炎症を和らげる薬を処方しますね。
