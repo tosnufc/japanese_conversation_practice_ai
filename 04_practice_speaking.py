@@ -31,7 +31,7 @@ def divide_list(lst, delimiter):
         return lst, []
 
 
-with open('conversation_scripts.txt' , 'r', encoding='utf-8') as file:
+with open('conversation_scripts.txt', 'r', encoding='utf-8') as file:
     lines = file.readlines()
 
 lst = lines

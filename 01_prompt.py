@@ -105,8 +105,32 @@ def get_completion(prompt, model=gpt_model, temperature=0):
 # """
 
 
+# scenario = f"""
+# You have been having a sore throat for the past two week. You are now visiting a doctor.
+# """
+#
+# prompt = f"""
+# You are a language teacher AI assistant.
+# Your task is as follows:
+# - generate a conversation in English from the scenario below.
+#       <<<{scenario}>>>
+# - convert the conversation you have generated into Japanese langauge using tone for everyday use.
+#
+# When converting into Japanese language, make sure you make it sounds natural in Japanese language, not just translating it directly.
+#
+# format the output as follows:
+#
+# Person A: <put your generated sentence here>
+# Person B: <put your generated sentence here>
+# Person A: <put your generated sentence here>
+# Person B:
+# Person A:
+# *****
+# <put your conversation translation here>
+# """
+
 scenario = f"""
-You have been having a sore throat for the past two week. You are now visiting a doctor.
+Your close friend looks sad. You want to comfort her and try to help.
 """
 
 prompt = f"""
