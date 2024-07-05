@@ -1,12 +1,16 @@
-Person A: Hey, you look really down today. Is everything okay?
-Person B: I'm just feeling a bit overwhelmed with everything that's going on.
-Person A: I'm sorry to hear that. Do you want to talk about it? Sometimes sharing can help.
-Person B: I don't even know where to start. There's just so much.
-Person A: Take your time. I'm here for you, no rush. Let's tackle one thing at a time.
+Person A: Hey, happy birthday!
+Person B: Thank you so much! I can't believe another year has gone by.
+Person A: Do you have any special plans for today?
+Person B: Not really, just going to have a small get-together with some friends and family.
+Person A: That sounds lovely. Need any help with the preparations?
+Person B: No, everything's pretty much set. But I'd love for you to come!
+Person A: Of course, I wouldn't miss it for the world.
 
 *****
-Person A: ねえ、今日なんか元気ないみたいだけど、大丈夫？
-Person B: ちょっといろいろなことが重なって、圧倒されてるんだ。
-Person A: それは大変だね。話したいことがあれば聞くよ。話すと少し楽になるかもしれないし。
-Person B: どこから話せばいいのかもわからない。なんかいっぱいありすぎて。
-Person A: ゆっくりでいいよ。焦らないで。ひとつずつ一緒に考えていこう。
+Person A: ねえ、お誕生日おめでとう！
+Person B: ありがとう！もう一年が過ぎたなんて信じられないよ。
+Person A: 今日は特別な予定あるの？
+Person B: 特にないけど、友達と家族で小さな集まりをする予定だよ。
+Person A: それは素敵だね。準備を手伝おうか？
+Person B: いや、ほとんど準備はできてるから大丈夫。でもぜひ来てほしいな！
+Person A: もちろん、絶対に行くよ。
