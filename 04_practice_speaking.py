@@ -14,6 +14,10 @@ conv = kks.getConverter()
 
 
 def speak(voice_file):
+    if not os.path.exists(voice_file):
+        print(f"You have navigated outside the conversation dialog. Please try again")
+        return
+
     if os.name == 'nt':  # For Windows
         os.system(f'start {voice_file}')
     else:  # For MacOS
@@ -54,6 +58,10 @@ def speak_text_ja(seq):
     speak(voice_file=f'elevenlab_ja_voice_{seq}.mp3')
 
 
+def speak_text_ja_without_text(seq):
+    speak(voice_file=f'elevenlab_ja_voice_{seq}.mp3')
+
+
 def go_forward(e):
     global num
     num += 1
@@ -68,7 +76,7 @@ def go_back(e):
 
 def repeat(e):
     global num
-    speak_text_ja(seq=num)
+    speak_text_ja_without_text(seq=num)
 
 
 def end_program(e):
@@ -81,11 +89,33 @@ def japanese(e):
     speak_text_ja(seq=num)
 
 
+def helper(e):
+    print('''
+    *********************************************
+    press enter to start or play English speech
+    press   >   to proceed
+    press   <   to go back
+    press  esc  to end the program
+    press space to play Japanese speech with text
+    press   ^   to repeat Japanese speech  
+    press   h   for help
+    *********************************************
+    ''')
+
+
+def english(e):
+    global num
+    speak_text_en(seq=num)
+
+
+keyboard.on_press_key('enter', english)
 keyboard.on_press_key('left', go_back)
 keyboard.on_press_key('right', go_forward)
 keyboard.on_press_key('esc', end_program)
 keyboard.on_press_key('up', repeat)
 keyboard.on_press_key('space', japanese)
+keyboard.on_press_key('h', helper)
 
+helper('')
 while cont:
     pass
