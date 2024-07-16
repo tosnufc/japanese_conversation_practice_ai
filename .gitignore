@@ -3,3 +3,4 @@
 .env
 /lessons/
 /archive/
+__pycache__/
