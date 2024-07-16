@@ -47,15 +47,20 @@ cont = True
 
 
 def speak_text_en(seq):
-    print(en_conv[seq])
-    speak(voice_file=f'openai_en_voice_{seq}.mp3')
-
+    try:
+        print(en_conv[seq])
+        speak(voice_file=f'openai_en_voice_{seq}.mp3')
+    except IndexError:
+        print("Index out of range. Please try again.")
 
 def speak_text_ja(seq):
-    print(ja_conv[seq])
-    kana = conv.do(ja_conv[seq])
-    print('Kana: {}'.format(kana))
-    speak(voice_file=f'elevenlab_ja_voice_{seq}.mp3')
+    try:
+        print(ja_conv[seq])
+        kana = conv.do(ja_conv[seq])
+        print('Kana: {}'.format(kana))
+        speak(voice_file=f'elevenlab_ja_voice_{seq}.mp3')
+    except IndexError:
+        print("Index out of range. Please try again.")
 
 
 def speak_text_ja_without_text(seq):
