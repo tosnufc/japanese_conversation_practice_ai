@@ -103,7 +103,7 @@ def helper(e):
     press  esc  to end the program
     press space to play Japanese speech with text
     press   ^   to repeat Japanese speech  
-    press   tab   for help
+    press  tab   for help
     *********************************************
     ''')
 
