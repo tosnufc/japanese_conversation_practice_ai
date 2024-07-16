@@ -7,7 +7,7 @@ client = openai.OpenAI()
 gpt_model = "gpt-4o"
 
 
-def get_completion(prompt, model=gpt_model, temperature=0):
+def get_completion(prompt, model=gpt_model, temperature=0.8):
     messages = [{"role": "user", "content": prompt}]
     response = client.chat.completions.create(
         model=model,
@@ -153,17 +153,17 @@ def get_completion(prompt, model=gpt_model, temperature=0):
 # <put your conversation translation here>
 # """
 
+archive_folder_name = "birthday_teacher"
+scenario = "Today is your Japanese teacher's birthday."
+tone = "very-polite-talking-to-your-senior" # 'casual', 'business', 'close-friend', 'very-polite-talking-to-your-senior'
 
-scenario = f"""
-Today is your best friend birthday.
-"""
 
 prompt = f"""
 You are a language teacher AI assistant.
 Your task is as follows:
 - generate a conversation in English from the scenario below.
       <<<{scenario}>>>
-- convert the conversation you have generated into Japanese langauge using tone for everyday use.
+- convert the conversation you have generated into Japanese langauge using {tone} tone.
 
 When converting into Japanese language, make sure you make it sounds natural in Japanese language, not just translating it directly.
 
