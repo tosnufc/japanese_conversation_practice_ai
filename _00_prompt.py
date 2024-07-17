@@ -28,9 +28,17 @@
 # scenario = "Today is your Japanese teacher's birthday."
 # tone = "very-polite-talking-to-your-senior" # 'casual', 'business', 'close-friend', 'very-polite-talking-to-your-senior'
 
-archive_folder_name = "combini"
-scenario = "You are paying for grocery at a Japanese convenient store."
-tone = "business" # 'casual', 'business', 'close-friend', 'very-polite-talking-to-your-senior'
+# archive_folder_name = "combini"
+# scenario = "You are paying for grocery at a Japanese convenient store."
+# tone = "business" # 'casual', 'business', 'close-friend', 'very-polite-talking-to-your-senior'
+
+# archive_folder_name = "network_engineer_job_interview"
+# scenario = "You are applying for a network engineer job in a Japanese company and is getting interviewed."
+# tone = "business" # 'casual', 'business', 'close-friend', 'very-polite-talking-to-your-senior'
+
+archive_folder_name = "buying_t-shirt"
+scenario = "You are shopping at a department store in Ginza. Looking for a classic black T-shirt in M-size. Also asking to try it on"
+tone = "business-polite" # 'casual', 'business', business-polite, 'close-friend', 'very-polite-talking-to-your-senior'
 
 prompt = f"""
 You are a language teacher AI assistant.
