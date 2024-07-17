@@ -1,5 +1,11 @@
 from pathlib import Path
 from openai import OpenAI
+from openai import api_key
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
 
 client = OpenAI()
 
@@ -26,7 +32,7 @@ for n in range(len(en_conv)-1):
     speech_file_path = Path(__file__).parent / f"openai_en_voice_{n}.mp3"
     with client.audio.speech.with_streaming_response.create(
         model="tts-1",
-        voice="alloy",
+        voice="echo", # alloy, echo, fable, onyx, nova, shimmer
         input=en_conv[n],
         response_format='mp3',
     ) as response:
