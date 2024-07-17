@@ -1,7 +1,5 @@
 from pathlib import Path
 from openai import OpenAI
-# import warnings
-# warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 client = OpenAI()
 
@@ -34,13 +32,4 @@ for n in range(len(en_conv)-1):
     ) as response:
         response.stream_to_file(speech_file_path)
     print(f"Writing openai_en_voice_{n}.mp3...")
-        
-    
-    # response = client.audio.speech.with_streaming_response.create(
-    #     model="tts-1",
-    #     voice="alloy",
-    #     input=en_conv[n],
-    # )
-    # speech_file_path = Path(__file__).parent / f"openai_en_voice_{n}.mp3"
-    # print(f"Writing openai_en_voice_{n}.mp3...")
-    # response.with_streaming_response.method(speech_file_path)
+
