@@ -1,5 +1,4 @@
 import openai
-import os
 from _00_prompt import *
 
 client = openai.OpenAI()
@@ -20,6 +19,6 @@ def get_completion(prompt, model=gpt_model, temperature=0.8):
 response = get_completion(prompt, temperature=0.7)
 print(response)
 
-# save the response to a text file named ‘conversation.txt’
+# save the response to a text file named ‘conversation_scripts.txt’
 with open('conversation_scripts.txt', 'w', encoding='utf-8') as f:
     f.write(response)
