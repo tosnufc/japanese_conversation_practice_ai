@@ -1,0 +1,12 @@
+Person A: Excuse me, do you have any classic black T-shirts in medium size?
+Person B: Yes, we do. Let me show you where they are.
+Person A: Thank you. Also, would it be possible for me to try one on?
+Person B: Of course, the fitting rooms are right over there. Let me get a medium-sized black T-shirt for you.
+Person A: Thank you very much.
+
+*****
+Person A: すみません、クラシックな黒いTシャツのMサイズはありますか？
+Person B: はい、ございます。こちらにご案内いたします。
+Person A: ありがとうございます。あと、試着してもよろしいですか？
+Person B: もちろんです。試着室はあちらにございますので、Mサイズの黒いTシャツをお持ちいたします。
+Person A: ありがとうございます。

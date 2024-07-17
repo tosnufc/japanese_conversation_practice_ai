@@ -47,15 +47,20 @@ cont = True
 
 
 def speak_text_en(seq):
-    print(en_conv[seq])
-    speak(voice_file=f'openai_en_voice_{seq}.mp3')
-
+    try:
+        print(en_conv[seq])
+        speak(voice_file=f'openai_en_voice_{seq}.mp3')
+    except IndexError:
+        print("Index out of range. Please try again.")
 
 def speak_text_ja(seq):
-    print(ja_conv[seq])
-    kana = conv.do(ja_conv[seq])
-    print('Kana: {}'.format(kana))
-    speak(voice_file=f'elevenlab_ja_voice_{seq}.mp3')
+    try:
+        print(ja_conv[seq])
+        kana = conv.do(ja_conv[seq])
+        print('Kana: {}'.format(kana))
+        speak(voice_file=f'elevenlab_ja_voice_{seq}.mp3')
+    except IndexError:
+        print("Index out of range. Please try again.")
 
 
 def speak_text_ja_without_text(seq):
@@ -98,7 +103,7 @@ def helper(e):
     press  esc  to end the program
     press space to play Japanese speech with text
     press   ^   to repeat Japanese speech  
-    press   h   for help
+    press  tab   for help
     *********************************************
     ''')
 
@@ -114,7 +119,7 @@ keyboard.on_press_key('right', go_forward)
 keyboard.on_press_key('esc', end_program)
 keyboard.on_press_key('up', repeat)
 keyboard.on_press_key('space', japanese)
-keyboard.on_press_key('h', helper)
+keyboard.on_press_key('tab', helper)
 
 helper('')
 while cont:
