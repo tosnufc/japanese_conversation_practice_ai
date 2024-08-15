@@ -44,9 +44,13 @@
 # scenario = "You want to buy a Shinkansen ticket from Tokyo station to Nagoya"
 # tone = "business" # 'casual', 'business', business-polite, 'close-friend', 'very-polite-talking-to-your-senior'
 
-archive_folder_name = "buying_art_museum_tickets"
-scenario = "You want to buy team-lab museum tickets for you and your family (4 adults and 1 7-years old kid)"
-tone = "business" # 'casual', 'business', business-polite, 'close-friend', 'very-polite-talking-to-your-senior'
+# archive_folder_name = "buying_art_museum_tickets"
+# scenario = "You want to buy team-lab museum tickets for you and your family (4 adults and 1 7-years old kid)"
+# tone = "business" # 'casual', 'business', business-polite, 'close-friend', 'very-polite-talking-to-your-senior'
+
+archive_folder_name = "relocating to the US"
+scenario = "You are tell your close friend that you will relocate to the US next year"
+tone = "close-friend" # 'casual', 'business', business-polite, 'close-friend', 'very-polite-talking-to-your-senior'
 
 prompt = f"""
 You are a language teacher AI assistant.
