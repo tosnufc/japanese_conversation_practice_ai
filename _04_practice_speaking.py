@@ -36,7 +36,7 @@ with open('conversation_scripts.txt', 'r', encoding='utf-8') as file:
     lines = file.readlines()
 
 lst = lines
-delimiter = '*****\\\\n'
+delimiter = '*****\n'
 en_conv, ja_conv = divide_list(lst, delimiter)
 
 num = 0
@@ -112,10 +112,10 @@ btn_next.pack()
 btn_previous = tk.Button(root, text="Previous", command=go_back)
 btn_previous.pack()
 
-# btn_japanese = tk.Button(root, text="Play Japanese", command=japanese)
-# btn_japanese.pack()
+btn_japanese = tk.Button(root, text="Play Japanese", command=japanese)
+btn_japanese.pack()
 
-btn_repeat = tk.Button(root, text="Japanese", command=repeat)
+btn_repeat = tk.Button(root, text="Repeat Japanese", command=repeat)
 btn_repeat.pack()
 
 btn_quit = tk.Button(root, text="Quit", command=end_program)
