@@ -1,6 +1,8 @@
 import openai
 from _00_prompt import *
+from dotenv import load_dotenv
 
+load_dotenv()
 client = openai.OpenAI()
 
 # gpt_model = "gpt-3.5-turbo"
