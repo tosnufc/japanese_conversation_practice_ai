@@ -48,7 +48,7 @@
 # scenario = "You want to buy team-lab museum tickets for you and your family (4 adults and 1 7-years old kid)"
 # tone = "business" # 'casual', 'business', business-polite, 'close-friend', 'very-polite-talking-to-your-senior'
 
-archive_folder_name = "relocating to the US"
+archive_folder_name = "relocating_to_ca"
 scenario = "You are tell your close friend that you will relocate to California next year"
 tone = "close-friend" # 'casual', 'business', business-polite, 'close-friend', 'very-polite-talking-to-your-senior'
 
@@ -63,7 +63,7 @@ When converting into Japanese language, make sure you make it sounds natural in 
 
 format the output as follows:
 
-Person A: <put your generated sentence here> 
+Person A: <put your generated sentence here>
 Person B: <put your generated sentence here>
 Person A: <put your generated sentence here>
 Person B:
