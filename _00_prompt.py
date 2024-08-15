@@ -49,7 +49,7 @@
 # tone = "business" # 'casual', 'business', business-polite, 'close-friend', 'very-polite-talking-to-your-senior'
 
 archive_folder_name = "relocating to the US"
-scenario = "You are tell your close friend that you will relocate to New York next year"
+scenario = "You are tell your close friend that you will relocate to California next year"
 tone = "close-friend" # 'casual', 'business', business-polite, 'close-friend', 'very-polite-talking-to-your-senior'
 
 prompt = f"""
