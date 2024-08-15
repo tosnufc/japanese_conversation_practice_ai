@@ -1,5 +1,4 @@
 import os
-from googletrans import Translator
 from pykakasi import kakasi
 from time import sleep
 import keyboard
@@ -7,7 +6,6 @@ import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
-translator = Translator()
 kks = kakasi()
 kks.setMode("J", "H")  # Japanese to Kana
 conv = kks.getConverter()
