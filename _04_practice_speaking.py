@@ -2,6 +2,7 @@ import os
 from pykakasi import kakasi
 import warnings
 import tkinter as tk
+from tkinter import scrolledtext
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
@@ -41,38 +42,45 @@ en_conv, ja_conv = divide_list(lst, delimiter)
 
 num = 0
 
+def update_text(widget, text):
+    widget.config(state=tk.NORMAL)
+    widget.delete('1.0', tk.END)
+    widget.insert(tk.INSERT, text)
+    widget.config(state=tk.DISABLED)
+
+def clear_japanese_texts():
+    update_text(japanese_text, '')
+    update_text(kana_text, '')
+
 def speak_text_en(seq):
     try:
-        print(en_conv[seq])
+        update_text(english_text, en_conv[seq])
+        root.update()  # Ensure the GUI updates before speaking
         speak(voice_file=f'openai_en_voice_{seq}.mp3')
     except IndexError:
         print("Index out of range. Please try again.")
 
 def speak_text_ja(seq):
     try:
-        print(ja_conv[seq])
+        update_text(japanese_text, ja_conv[seq])
         kana = conv.do(ja_conv[seq])
-        print('Kana: {}'.format(kana))
+        update_text(kana_text, 'Kana: {}'.format(kana))
+        root.update()  # Ensure the GUI updates before speaking
         speak(voice_file=f'elevenlab_ja_voice_{seq}.mp3')
     except IndexError:
         print("Index out of range. Please try again.")
 
-def speak_text_ja_without_text(seq):
-    speak(voice_file=f'elevenlab_ja_voice_{seq}.mp3')
 
 def go_forward():
     global num
     num += 1
+    clear_japanese_texts()  # Clear Japanese text boxes when 'Next' is clicked
     speak_text_en(seq=num)
 
 def go_back():
     global num
     num -= 1
     speak_text_en(seq=num)
-
-def repeat():
-    global num
-    speak_text_ja_without_text(seq=num)
 
 def end_program():
     root.destroy()
@@ -89,7 +97,6 @@ def helper():
     press the "Previous" button to go back
     press the "Quit" button to end the program
     press the "Play Japanese" button to play Japanese speech with text
-    press the "Repeat Japanese" button to repeat Japanese speech
     *********************************************
     '''
     print(help_text)
@@ -101,6 +108,16 @@ def english():
 # GUI setup
 root = tk.Tk()
 root.title("Japanese Conversation Practice")
+
+# Text areas for displaying conversation
+english_text = scrolledtext.ScrolledText(root, wrap=tk.WORD, state=tk.DISABLED, width=80, height=3)
+english_text.pack()
+
+japanese_text = scrolledtext.ScrolledText(root, wrap=tk.WORD, state=tk.DISABLED, width=80, height=3)
+japanese_text.pack()
+
+kana_text = scrolledtext.ScrolledText(root, wrap=tk.WORD, state=tk.DISABLED, width=80, height=2)
+kana_text.pack()
 
 # Adding buttons
 btn_english = tk.Button(root, text="Play English", command=english)
@@ -114,9 +131,6 @@ btn_previous.pack()
 
 btn_japanese = tk.Button(root, text="Play Japanese", command=japanese)
 btn_japanese.pack()
-
-btn_repeat = tk.Button(root, text="Repeat Japanese", command=repeat)
-btn_repeat.pack()
 
 btn_quit = tk.Button(root, text="Quit", command=end_program)
 btn_quit.pack()
