@@ -1,15 +1,13 @@
 import os
 from pykakasi import kakasi
-from time import sleep
-import keyboard
 import warnings
-warnings.filterwarnings("ignore", category=DeprecationWarning)
+import tkinter as tk
 
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 kks = kakasi()
 kks.setMode("J", "H")  # Japanese to Kana
 conv = kks.getConverter()
-
 
 def speak(voice_file):
     if not os.path.exists(voice_file):
@@ -18,9 +16,11 @@ def speak(voice_file):
 
     if os.name == 'nt':  # For Windows
         os.system(f'start {voice_file}')
-    else:  # For MacOS
-        os.system(f'afplay {voice_file}')
-
+    elif os.name == 'posix':  # For MacOS and Linux
+        if os.uname().sysname == 'Darwin':  # MacOS
+            os.system(f'afplay {voice_file}')
+        else:  # Linux
+            os.system(f'ffplay -nodisp -autoexit {voice_file}')
 
 def divide_list(lst, delimiter):
     try:
@@ -32,17 +32,14 @@ def divide_list(lst, delimiter):
         # If the delimiter is not in the list, return the original list and an empty list
         return lst, []
 
-
 with open('conversation_scripts.txt', 'r', encoding='utf-8') as file:
     lines = file.readlines()
 
 lst = lines
-delimiter = '*****\n'
+delimiter = '*****\\\\n'
 en_conv, ja_conv = divide_list(lst, delimiter)
 
 num = 0
-cont = True
-
 
 def speak_text_en(seq):
     try:
@@ -60,65 +57,69 @@ def speak_text_ja(seq):
     except IndexError:
         print("Index out of range. Please try again.")
 
-
 def speak_text_ja_without_text(seq):
     speak(voice_file=f'elevenlab_ja_voice_{seq}.mp3')
 
-
-def go_forward(e):
+def go_forward():
     global num
     num += 1
     speak_text_en(seq=num)
 
-
-def go_back(e):
+def go_back():
     global num
     num -= 1
     speak_text_en(seq=num)
 
-
-def repeat(e):
+def repeat():
     global num
     speak_text_ja_without_text(seq=num)
 
+def end_program():
+    root.destroy()
 
-def end_program(e):
-    global cont
-    cont = False
-
-
-def japanese(e):
+def japanese():
     global num
     speak_text_ja(seq=num)
 
-
-def helper(e):
-    print('''
+def helper():
+    help_text = '''
     *********************************************
-    press enter to start or play English speech
-    press   >   to proceed
-    press   <   to go back
-    press  esc  to end the program
-    press space to play Japanese speech with text
-    press   ^   to repeat Japanese speech  
-    press  tab   for help
+    press the "Play English" button to start or play English speech
+    press the "Next" button to proceed
+    press the "Previous" button to go back
+    press the "Quit" button to end the program
+    press the "Play Japanese" button to play Japanese speech with text
+    press the "Repeat Japanese" button to repeat Japanese speech
     *********************************************
-    ''')
+    '''
+    print(help_text)
 
-
-def english(e):
+def english():
     global num
     speak_text_en(seq=num)
 
+# GUI setup
+root = tk.Tk()
+root.title("Japanese Conversation Practice")
 
-keyboard.on_press_key('enter', english)
-keyboard.on_press_key('left', go_back)
-keyboard.on_press_key('right', go_forward)
-keyboard.on_press_key('esc', end_program)
-keyboard.on_press_key('up', repeat)
-keyboard.on_press_key('space', japanese)
-keyboard.on_press_key('tab', helper)
+# Adding buttons
+btn_english = tk.Button(root, text="Play English", command=english)
+btn_english.pack()
 
-helper('')
-while cont:
-    pass
+btn_next = tk.Button(root, text="Next", command=go_forward)
+btn_next.pack()
+
+btn_previous = tk.Button(root, text="Previous", command=go_back)
+btn_previous.pack()
+
+# btn_japanese = tk.Button(root, text="Play Japanese", command=japanese)
+# btn_japanese.pack()
+
+btn_repeat = tk.Button(root, text="Japanese", command=repeat)
+btn_repeat.pack()
+
+btn_quit = tk.Button(root, text="Quit", command=end_program)
+btn_quit.pack()
+
+helper()
+root.mainloop()
