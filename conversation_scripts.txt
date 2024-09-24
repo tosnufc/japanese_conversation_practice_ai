@@ -1,16 +1,12 @@
-Person A: Hey, I have some big news to share with you.
-Person B: Oh, really? What’s going on?
-Person A: I’m going to be relocating to California next year.
-Person B: Wow, that’s huge! How come?
-Person A: I got a great job opportunity there, and I think it’s time for a change.
-Person B: I’m going to miss you so much, but I’m really happy for you.
-Person A: Thanks, I’ll miss you too. But we’ll stay in touch, for sure.
+Person A: Hi, I'm looking for a second-hand laptop that is lightweight and has the longest battery life. Can you help me find one?
+Person B: Of course! We have a few options that might interest you. Are there any specific brands or models you're looking for?
+Person A: I'm open to any brand, as long as it meets my requirements. What do you recommend?
+Person B: In that case, I would recommend looking at this ultrabook. It's very light and has a battery life of up to 12 hours.
+Person A: That sounds good. Can I take a look at it and maybe test it out?
 
 *****
-Person A: ねえ、ちょっと大きなニュースがあるんだ。
-Person B: え、本当？何があったの？
-Person A: 来年カリフォルニアに引っ越すことになったんだ。
-Person B: えー、それはすごいね！どうして？
-Person A: いい仕事のオファーがあってね、ちょっと変化が必要だと思ってさ。
-Person B: すごく寂しくなるけど、本当に嬉しいよ。
-Person A: ありがとう、僕も寂しくなるよ。でも、絶対に連絡は取り続けようね。
+Person A: こんにちは、軽量でバッテリー寿命が長い中古のノートパソコンを探しています。お手伝いいただけますか？
+Person B: もちろんです。いくつかご提案できるものがあります。特定のブランドやモデルの希望はありますか？
+Person A: 特にブランドにはこだわりませんが、私の条件に合うものがあれば教えてください。何かおすすめはありますか？
+Person B: それなら、このウルトラブックをお勧めします。非常に軽く、バッテリー寿命は最大12時間です。
+Person A: それは良さそうですね。実際に見て、試してみてもいいですか？

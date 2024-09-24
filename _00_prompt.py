@@ -48,9 +48,13 @@
 # scenario = "You want to buy team-lab museum tickets for you and your family (4 adults and 1 7-years old kid)"
 # tone = "business" # 'casual', 'business', business-polite, 'close-friend', 'very-polite-talking-to-your-senior'
 
-archive_folder_name = "relocating_to_ca"
-scenario = "You are tell your close friend that you will relocate to California next year"
-tone = "close-friend" # 'casual', 'business', business-polite, 'close-friend', 'very-polite-talking-to-your-senior'
+# archive_folder_name = "relocating_to_ca"
+# scenario = "You are tell your close friend that you will relocate to California next year"
+# tone = "close-friend" # 'casual', 'business', business-polite, 'close-friend', 'very-polite-talking-to-your-senior'
+
+archive_folder_name = "buying_2nd_hand_pc_akb"
+scenario = "You are at an electronic shop selling second-hand laptops, PC and parts. You want to buy the one with the lighest weight and have longest battery life"
+tone = "business" # 'casual', 'business', business-polite, 'close-friend', 'very-polite-talking-to-your-senior'
 
 prompt = f"""
 You are a language teacher AI assistant.
