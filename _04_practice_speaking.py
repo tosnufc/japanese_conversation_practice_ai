@@ -110,13 +110,13 @@ root = tk.Tk()
 root.title("Japanese Conversation Practice")
 
 # Text areas for displaying conversation
-english_text = scrolledtext.ScrolledText(root, wrap=tk.WORD, state=tk.DISABLED, width=80, height=3)
+english_text = scrolledtext.ScrolledText(root, wrap=tk.WORD, state=tk.DISABLED, width=80, height=5)
 english_text.pack()
 
-japanese_text = scrolledtext.ScrolledText(root, wrap=tk.WORD, state=tk.DISABLED, width=80, height=3)
+japanese_text = scrolledtext.ScrolledText(root, wrap=tk.WORD, state=tk.DISABLED, width=80, height=5)
 japanese_text.pack()
 
-kana_text = scrolledtext.ScrolledText(root, wrap=tk.WORD, state=tk.DISABLED, width=80, height=2)
+kana_text = scrolledtext.ScrolledText(root, wrap=tk.WORD, state=tk.DISABLED, width=80, height=5)
 kana_text.pack()
 
 # Adding buttons
