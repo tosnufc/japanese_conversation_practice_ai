@@ -1,12 +1,11 @@
-Person A: Hi, I'm looking for a second-hand laptop that is lightweight and has the longest battery life. Can you help me find one?
-Person B: Of course! We have a few options that might interest you. Are there any specific brands or models you're looking for?
-Person A: I'm open to any brand, as long as it meets my requirements. What do you recommend?
-Person B: In that case, I would recommend looking at this ultrabook. It's very light and has a battery life of up to 12 hours.
-Person A: That sounds good. Can I take a look at it and maybe test it out?
-
+Person A: Hey, guess what? I'm going to be in Osaka with my family next week!  
+Person B: That's awesome! Are you planning to stop by Kyoto to visit me?  
+Person A: I wish I could, but we’re heading to Universal Studios and won’t have time to make it to Kyoto.  
+Person B: Oh, I understand. Universal Studios sounds like a lot of fun!  
+Person A: Yeah, I'm really excited about it. We'll definitely catch up soon, though!  
 *****
-Person A: こんにちは、軽量でバッテリー寿命が長い中古のノートパソコンを探しています。お手伝いいただけますか？
-Person B: もちろんです。いくつかご提案できるものがあります。特定のブランドやモデルの希望はありますか？
-Person A: 特にブランドにはこだわりませんが、私の条件に合うものがあれば教えてください。何かおすすめはありますか？
-Person B: それなら、このウルトラブックをお勧めします。非常に軽く、バッテリー寿命は最大12時間です。
-Person A: それは良さそうですね。実際に見て、試してみてもいいですか？
+Person A: ねえ、ちょっと聞いて！来週、家族と一緒に大阪に行くんだ！  
+Person B: それはすごいね！京都に寄って会いに来る予定はあるの？  
+Person A: 行きたいんだけど、ユニバーサル・スタジオに行くから、京都には行けそうにないんだ。  
+Person B: そっか、わかったよ。ユニバーサル・スタジオ、楽しそうだね！  
+Person A: うん、すごく楽しみ！でも、またすぐに会おうね！
